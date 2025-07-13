@@ -1,0 +1,250 @@
+body {
+  font-family: 'Chewy', cursive;
+  background-image: url('media/wood.gif'); /* background sama seperti index */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+
+.top-left-buttons,
+.top-right-buttons {
+  position: fixed;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.top-left-buttons {
+  top: 20px;
+  left: 20px;
+}
+
+.top-right-buttons {
+  top: 20px;
+  right: 20px;
+}
+
+.top-left-buttons img,
+.top-right-buttons img {
+  width: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.top-left-buttons img:hover,
+.top-right-buttons img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  background-color: #777;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+.judul {
+  font-size: 36px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.subjudul {
+  font-size: 24px;
+  margin: 20px 0;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.level-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 30px;
+}
+
+.level-btn {
+  padding: 20px 30px;
+  font-size: 22px;
+  font-family: 'Chewy', cursive;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffcc00;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.level-btn literasi {
+  padding: 20px 30px;
+  font-size: 22px;
+  font-family: 'Chewy', cursive;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffcc00;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.level-btn:hover {
+  background-color: #ffaa00;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.level-btn.disabled {
+  background-color: #ccc;
+  color: #777;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .level-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .level-btn {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+}
+
+/* Popup Profil */
+#popup-profil {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popup-profil .popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  color: #333;
+}
+
+#popup-profil img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#popup-profil p {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
+#popup-close {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#popup-close:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 10px;
+  font-weight: normal;
+}
+#nama-pengguna-label {
+  position: absolute;
+  top: 20px;
+  left: 90px;
+  font-size: 24px;
+  background-color: rgba(139, 199, 133, 0.8);
+  padding: 6px 12px;
+  border-radius: 12px;
+  color: black;
+  z-index: 999;
+  font-family: 'Chewy', cursive;
+  box-shadow: 0 2px 6px rgba(15, 15, 197, 0.84);
+}
+.petunjuk-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.petunjuk-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: left;
+  color: #000;
+  font-family: 'Chewy', cursive;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.petunjuk-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.petunjuk-box ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.petunjuk-box button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.petunjuk-box button:hover {
+  background-color: #218838;
+}

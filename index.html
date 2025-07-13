@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Interaktif SD</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <script defer src="nama_pengguna.js"></script>
+</head>
+<body>
+  <!-- Tombol Navigasi Kanan -->
+  <div class="top-right-buttons">
+    <button id="reset-nama-btn" class="btn-reset-nama">Ganti Nama Pengguna</button>
+    <img src="media/saya.png" alt="profil" class="btn-profil" data-menu="profil" width="50px">
+    <img src="media/play.png" alt="play" class="btn-play" data-menu="play" width="45px">
+    <img src="media/mute.png" alt="mute" class="btn-mute" data-menu="mute" width="50px">
+    <img src="media/information.png" alt="information" class="btn-information" data-menu="information" width="50px">
+  </div>
+
+  <!-- Container Utama -->
+  <div class="container">
+    <div class="judul-utama">
+      <h1>Media Pembelajaran Interaktif</h1>
+      <h2>Kelas 5 Sekolah Dasar</h2>
+    </div>
+
+    <div class="menu-wrapper">
+      <p class="judul-game">Silakan pilih game:</p>
+      <div class="menu-horizontal">
+        <div class="menu-item">
+          <img src="media/matematika.png" alt="Game Numerasi" class="btn-numerasi" data-menu="numerasi">
+          <p class="label">Game Numerasi</p>
+        </div>
+        <div class="menu-item">
+          <img src="media/baca.png" alt="Game Literasi" class="btn-literasi" data-menu="literasi">
+          <p class="label">Game Literasi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Profil Pembuat -->
+  <div id="popup-profil">
+    <div class="popup-content">
+      <img src="media/profil.png" alt="Foto Profil">
+      <p> PROFIL PEMBUAT </p>
+      <p><strong>Nama:</strong> Hikmatullah, S.Pd</p>
+      <p><strong>Sekolah:</strong> SDN Ranca Tales</p>
+      <p><strong>Jabatan:</strong> Guru Kelas</p>
+      <button id="popup-close">Tutup</button>
+    </div>
+  </div>
+
+  <!-- Popup Input Nama Pengguna -->
+  <div id="popup-nama" class="popup-overlay">
+    <div class="popup-content">
+      <h3>Selamat datang!</h3>
+      <p>Silakan masukkan nama kamu:</p>
+      <input type="text" id="input-nama" placeholder="Nama lengkap" autocomplete="off" />
+      <button id="btn-simpan-nama">Mulai</button>
+    </div>
+  </div>
+</body>
+</html>

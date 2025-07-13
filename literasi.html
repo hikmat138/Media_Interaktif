@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Literasi</title>
+  <link rel="stylesheet" href="numerasi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+  <!-- Tombol kiri atas -->
+  <div id="nama-pengguna-label"></div>
+  <div class="top-right-buttons">
+    <img src="media/saya.png" alt="profil" class="btn-profil" data-menu="profil" width="50px">
+    <img src="media/play.png" alt="play" class="btn-play" width="40">
+    <img src="media/mute.png" alt="mute" class="btn-mute" width="40">
+    <img src="media/information.png" alt="info" class="btn-information" width="40">
+  </div>
+
+  <!-- Tombol kanan atas kembali ke menu -->
+  <div class="top-left-buttons">
+    <a href="index.html"><img src="media/menu.png" alt="kembali ke menu" class="btn-menu" width="40"></a>
+  </div>
+
+  <!-- Judul dan tombol level -->
+   
+  <main class="content">
+    <h1 class="judul">GAME LITERASI MEMBACA</h1>
+    <p class="subjudul">SILAHKAN PILIH LEVEL</p>
+
+    <div class="level-buttons">
+      <button class="level-btn" data-level="1">Level 1</button>
+      <button class="level-btn disabled" data-level="2">Level 2</button>
+      <button class="level-btn disabled" data-level="3">Level 3</button>
+      <button class="level-btn disabled" data-level="4">Level 4</button>
+      <button class="level-btn disabled" data-level="5">Level 5</button>
+      <button class="level-btn disabled" data-level="6">Level 6</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="literasi.js"></script>
+  <script defer src="nama_pengguna.js"></script>
+  
+  <div id="popup-profil">
+    <div class="popup-content">
+      <img src="media/profil.png" alt="Foto Profil">
+      <p> PROFIL PEMBUAT </p>
+      <p><strong>Nama:</strong> Hikmatullah, S.Pd</p>
+      <p><strong>Sekolah:</strong> SDN Ranca Tales</p>
+      <p><strong>Jabatan:</strong> Guru Kelas</p>
+      <button id="popup-close">Tutup</button>
+    </div>
+  </div>
+</body>
+</html>

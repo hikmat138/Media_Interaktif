@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Level 4 – Game Numerasi</title>
+  <link rel="stylesheet" href="level1_numerasi.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet" />
+</head>
+<body>
+<audio id="sound-benar" src="media/benar.mp3"></audio>
+<audio id="sound-salah" src="media/salah.mp3"></audio>
+<audio id="sound-sukses" src="media/sukses.mp3"></audio>
+<audio id="sound-gagal" src="media/gagal.mp3"></audio>
+<audio id="sound-habis" src="media/waktuhabis.mp3"></audio>
+  <!-- Tombol Navigasi Kiri -->
+
+  <div class="top-left-buttons">
+    <img src="media/menu.png" alt="Keluar" class="btn-exit" width="45px" />
+  </div>
+
+  <!-- Tombol Navigasi Kanan -->
+  <div class="top-right-buttons">
+    <img src="media/saya.png" alt="profil" class="btn-profil" width="45px" />
+    <img src="media/play.png" alt="play" class="btn-play" width="40px" />
+    <img src="media/mute.png" alt="mute" class="btn-mute" width="45px" />
+    <img src="media/information.png" alt="info" class="btn-information" width="45px" />
+  </div>
+
+  <!-- Area Game -->
+  <div class="game-container">
+    <div id="nama-pengguna-label"></div>
+    <h1 class="judul">Level 4 - Perkalian 2 digit x 1 digit</h1>
+    <h1 class="judul">Perkalian 1 digit x 2 digit</h1>
+
+    <div class="status-bar">
+      <div class="timer">Waktu: <span id="timer">30</span> detik</div>
+      <div class="score">Skor: <span id="score">0</span></div>
+    </div>
+
+    <div class="soal" id="soal">60 x 6 = ?</div>
+
+    <input type="number" id="jawaban" placeholder="Tulis jawaban di sini" autocomplete="off" />
+
+    <button id="kirim-jawaban">Kirim</button>
+  </div>
+
+  <!-- Popup Profil -->
+  <div id="popup-profil">
+    <div class="popup-content">
+      <img src="media/profil.png" alt="Foto Profil">
+      <p> PROFIL PEMBUAT </p>
+      <p><strong>Nama:</strong> Hikmatullah, S.Pd</p>
+      <p><strong>Sekolah:</strong> SDN Ranca Tales</p>
+      <p><strong>Jabatan:</strong> Guru Kelas</p>
+      <button id="popup-close">Tutup</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="level4_numerasi.js"></script>
+    <script defer src="nama_pengguna.js"></script>
+
+</body>
+</html>
